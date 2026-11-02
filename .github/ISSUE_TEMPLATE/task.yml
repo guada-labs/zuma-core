@@ -1,0 +1,57 @@
+name: Task
+description: A scoped unit of work with acceptance criteria
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why this work is needed. Link related issues or decisions.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is included. Use bullet points.
+      placeholder: |
+        - ...
+        - ...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Verifiable conditions that define done.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Tests
+      description: What tests prove this works, including failure paths.
+    validations:
+      required: false
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Blocked by / blocks. Use issue references.
+    validations:
+      required: false
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Phase
+      description: Which project phase does this belong to?
+      options:
+        - F0 — Seams
+        - F1 — Sovereign minimum
+        - F2 — Optimize
+        - F3 — Empower
+    validations:
+      required: true
