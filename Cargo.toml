@@ -1,0 +1,15 @@
+[package]
+name = "zuma-core"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[dependencies]
+async-trait = "0.1.88"
+bytes = "1.12.1"
+thiserror = "2.0.20"
+tokio = { version = "1", features = ["sync"] }
+zuma-protocol = { path = "../zuma-protocol" }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
